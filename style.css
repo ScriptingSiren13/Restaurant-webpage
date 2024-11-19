@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Navigation */
+/* for the nav items to have some space between them */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    /* For some specific space between the two */
+    max-width: 1200px;
+    /* for aligning it at the center */
+    margin: 0 auto;
+}
+
+
+nav {
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.5);
+    /* TO STICK THE NAVIGATION AT ONE PLACE */
+    position: sticky;
+    top: 0;
+    margin-bottom: 32px;
+    background-color: white;
+    /* For mobile: spaces on the sides */
+    padding: 10px;
+    /* SO THAT IT DOES NOT OVERLAP THE TOP SECTION WHICH EAS FIXED */
+    z-index: 50;
+}
+
+.bar-icon {
+    font-size: 24px;
+}
+
+/* HERO SECTION */
+.hero {
+    /* for displaying things side by side */
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    /* For gap between all the items */
+    gap: 20px;
+}
+
+.tag {
+    background-color: #149f39;
+    padding: 5px 10px;
+    color: white;
+    /* so that the green portion of tag does not stretch out */
+    align-self: flex-start;
+}
+
+.hero-content h1 {
+    font-size: 68px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    transition: ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+.explore-btn {
+    background: #ffc066;
+    align-self: flex-start;
+}
+
+
+/* ICONS SECTION */
+.features {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.feature {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.feature:hover {
+    transition: 0.2s ease-in-out;
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.5);
+}
+
+.feature img {
+    width: 80px;
+}
+
+.divider {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* MENU SECTION */
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px 0;
+    align-items: center;
+}
+
+.menu .tag {
+    align-self: center;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "I1 I1 I2 I3"
+        "I1 I1 I2 I7"
+        "I4 I5 I6 I7";
+}
+
+.grid-image {
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+
+}
+
+.grid-image:hover {
+    /* TO POP OUT A BIT */
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.item1 {
+    grid-area: I1;
+}
+
+.item2 {
+    grid-area: I2;
+}
+
+.item3 {
+    grid-area: I3;
+}
+
+.item4 {
+    grid-area: I4;
+}
+
+.item5 {
+    grid-area: I5;
+}
+
+.item6 {
+    grid-area: I6;
+}
+
+.item7 {
+    grid-area: I7;
+}
+
+/* FOOTER */
+footer {
+    background-color: #fff0db;
+}
+
+.footer-container {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px;
+    font-size: 32px;
+}
+
+.link-lists {
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.link-lists ul {
+    list-style: none;
+}
+
+.link-lists ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.news-letter {
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.news-letter input {
+    padding: 5px 40px;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+/* TO MAKE THE WEBSITE MORE RESPONSIVE */
+
+@media(max-width:786px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 90%;
+    }
+
+    .hero-content {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feauture {
+        flex-direction: column;
+    }
+
+    .grid {
+        padding: 10px;
+    }
+
+    .grid-image {
+        border-radius: 0px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
